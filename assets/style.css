@@ -1,0 +1,291 @@
+@font-face {
+  font-family: "Bebas Neue";
+  src: url(fonts/BebasNeue-Regular.ttf);
+}
+
+main {
+  overflow-x: hidden;
+  margin-left: 8px;
+}
+
+a:active {
+  font-weight: bolder;
+}
+
+.bi:active {
+  transform: scale(1.1);
+}
+
+.showNextCard {
+  position: absolute;
+  top: 50%;
+  z-index: 200;
+  right: 0;
+}
+
+/* CARDS */
+
+#carouselCard img {
+  width: 17rem;
+}
+
+.btn,
+.bi-play-circle-fill {
+  color: black;
+}
+
+.card-body {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  position: absolute;
+  visibility: hidden;
+  padding: 10px;
+}
+
+#carouselCard:hover {
+  transform: scale(1.4);
+  transition-duration: 0.5s;
+  z-index: 100;
+}
+
+#carouselCard:hover .card-body {
+  visibility: visible;
+}
+
+footer {
+  margin-top: 30px;
+  max-width: 600px;
+  font-size: x-small;
+}
+
+/* ANIMAZIONE INTRO */
+.intro {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  overflow: hidden;
+  animation: disappear 2s 2s both;
+  z-index: 3;
+}
+
+.intro img {
+  height: 200px;
+  position: absolute;
+  left: 45%;
+  top: 30%;
+  animation: scale-down-center 2.5s ease;
+  opacity: 0;
+}
+
+.linesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#lines {
+  margin: 3px;
+  width: 9px;
+  height: 100%;
+  opacity: 0.3;
+  filter: blur(2px);
+}
+
+/* ANIMAZIONE INTRO */
+@keyframes scale-down-center {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+/* ANIMAZIONE LINEE */
+
+.line1 {
+  animation: scale-up-1 1.6s 0.7s linear both;
+}
+@keyframes scale-up-1 {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(2.2);
+    translate: 0px;
+  }
+}
+.line2 {
+  animation: scale-up-2 1.5s 0.7s linear both;
+}
+@keyframes scale-up-2 {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(4.2);
+    translate: -190px;
+  }
+}
+.line3 {
+  animation: scale-up-3 1.2s 0.7s linear both;
+}
+@keyframes scale-up-3 {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(3.2);
+    translate: -400px;
+  }
+}
+.line4 {
+  animation: scale-up-4 1.4s 0.7s linear both;
+}
+@keyframes scale-up-4 {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(2.2);
+    translate: -100px;
+  }
+}
+.line5 {
+  animation: scale-up-5 1.2s 0.7s linear both;
+}
+@keyframes scale-up-5 {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.2);
+    translate: 70px;
+  }
+}
+.line6 {
+  animation: scale-up-6 1.7s 0.7s linear both;
+}
+@keyframes scale-up-6 {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(2.2);
+    translate: 150px;
+  }
+}
+.line7 {
+  animation: scale-up-7 1.4s 0.7s linear both;
+}
+@keyframes scale-up-7 {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(2.2);
+    translate: 300px;
+  }
+}
+.line8 {
+  animation: scale-up-8 1.4s 0.7s linear both;
+}
+@keyframes scale-up-8 {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(2.4);
+    translate: 100px;
+  }
+}
+.line9 {
+  animation: scale-up-9 1.4s 0.7s linear both;
+}
+@keyframes scale-up-9 {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(2.3);
+    translate: 180px;
+  }
+}
+.line10 {
+  animation: scale-up-10 1s 0.7s linear both;
+}
+@keyframes scale-up-10 {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.2);
+    translate: 45px;
+  }
+}
+.line11 {
+  animation: scale-up-11 1.4s 0.7s linear both;
+}
+@keyframes scale-up-11 {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(2.2);
+    translate: -450px;
+  }
+}
+.line12 {
+  animation: scale-up-12 1.8s 0.7s linear both;
+}
+@keyframes scale-up-12 {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(6.2);
+    translate: 400px;
+  }
+}
