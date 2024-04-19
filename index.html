@@ -214,7 +214,6 @@
 
     <main>
         <div class="carousel firstCarousel mt-5">
-
             <button class="btn btn-light showNextCard rounded-circle">
                 <i class="bi bi-chevron-right"></i>
             </button>
@@ -319,7 +318,6 @@
         </div>
 
         <div class="carousel secondCarousel mt-5">
-
             <button class="btn btn-light showNextCard rounded-circle">
                 <i class="bi bi-chevron-right"></i>
             </button>
@@ -426,7 +424,6 @@
         </div>
 
         <div class="carousel thirdCarousel mt-5">
-
             <button class="btn btn-light showNextCard rounded-circle">
                 <i class="bi bi-chevron-right"></i>
             </button>
@@ -533,7 +530,6 @@
         </div>
 
         <div class="carousel fourthCarousel mt-5">
-
             <button class="btn btn-light rounded-circle showNextCard">
                 <i class=" bi bi-chevron-right"></i>
             </button>
@@ -625,7 +621,7 @@
                 </div>
                 <div id="carouselCard" style="width: 17rem;">
                     <img src="assets/movies/3.png" alt="">
-                    <div class="card-body">
+                    <div class="card-body" onmouseover="resize(this)">
                         <h5 class="card-title">Movie title</h5>
                         <p class="card-text mt-1">Some quick example text to build on the card title and make up the
                             bulk of
@@ -638,8 +634,6 @@
                 </div>
             </div>
         </div>
-
-
     </main>
     <!--FOOTER-->
     <footer class="container text-secondary">
@@ -704,6 +698,21 @@
         initializeCarousel('secondCarousel');
         initializeCarousel('thirdCarousel');
         initializeCarousel('fourthCarousel');
+
+        const cards = document.querySelectorAll('#carouselCard');
+
+        cards.forEach((card, i) => {
+            card.addEventListener('mouseover', () => {
+                card.style.zIndex = 100
+            });
+        });
+
+        cards.forEach((card, i) => {
+            card.addEventListener('mouseout', () => {
+                card.style.zIndex = 0
+            });
+        });
+
     </script>
 
 </body>

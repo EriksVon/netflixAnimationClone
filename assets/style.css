@@ -40,16 +40,17 @@ a:active {
   position: absolute;
   visibility: hidden;
   padding: 10px;
+  z-index: 2;
 }
 
 #carouselCard:hover {
   transform: scale(1.4);
   transition-duration: 0.5s;
-  z-index: 100;
 }
 
 #carouselCard:hover .card-body {
   visibility: visible;
+  z-index: 100;
 }
 
 footer {
